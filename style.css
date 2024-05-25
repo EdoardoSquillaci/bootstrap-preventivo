@@ -10,3 +10,7 @@ header{
 .navigazione a {
     color: gray;
 }
+
+footer{
+    background-color: rgb(33, 33, 33);
+}
