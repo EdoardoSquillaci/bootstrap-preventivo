@@ -132,7 +132,7 @@ switch (typeJob){
 
     priceTitle.classList.remove('d-none')
 
-   document.getElementById('price-normal').textContent = prezzo
+   document.getElementById('price-normal').textContent = prezzo + '€'
 
 
    break
@@ -145,7 +145,7 @@ switch (typeJob){
 
    priceTitle.classList.remove('d-none')
 
-   document.getElementById('price-normal').textContent = prezzo
+   document.getElementById('price-normal').textContent = prezzo + '€'
    
    break
 
@@ -156,15 +156,15 @@ switch (typeJob){
 
     priceTitle.classList.remove('d-none')
 
-   document.getElementById('price-normal').textContent = prezzo
+   document.getElementById('price-normal').textContent = prezzo + '€'
 
    break
 
    default:
 
-   document.getElementById('price-title').textContent = 'Devi Selezionare un Servizio per poter visualizzare il prezzo.'
+   document.getElementById('errore-select').textContent = 'Devi Selezionare un Servizio per poter visualizzare il prezzo.'
 
-   return
+   
 
 }
 
@@ -178,7 +178,7 @@ const PromoValue = document.getElementById('promo-input').value
 if(PromoValue === codicePromo){
 
     prezzo = prezzo - ([prezzo * 25] / 100)
-    document.getElementById('price-normal').textContent = prezzo.toFixed(2)
+    document.getElementById('price-normal').textContent = prezzo.toFixed(2) + '€'
 }
 
 prezzo = parseFloat(Number(prezzo.toFixed(2)));
