@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richiesta Preventivo</title>
 
-
-<!--Bootstrap-->
+    <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
-<!--Bootstrap-->
+    <!--Bootstrap-->
 
-<!--Css-->
-<link rel="stylesheet" href="style.css">
-<!--Css-->
+    <!--Css-->
+    <link rel="stylesheet" href="style.css">
+    <!--Css-->
 
 </head>
 <body>
@@ -20,212 +19,149 @@
 <!--Inizio esercizio-->
 
 <header> <!--Inizio Header-->
-
-
-
-    <nav class=" header navbar navbar-expand-lg ">
-
-        <div class="container-fluid ">  <!--Inizio container header-->
+    <nav class="header navbar navbar-expand-lg ">
+        <div class="container-fluid">  <!--Inizio container header-->
           
-<!--Logo-->
+            <!--Logo-->
             <a class="navbar-brand text-light ms-5" href="#">Bool Factory</a>
- <!--Logo-->        
-          
+            <!--Logo-->        
 
+            <!--Menu in collapse-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
- <!--Menu in collapse-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-            <ul class="navbar-nav pe-5 ">
-                <li class="navigazione nav-item ">
-                  <a class="nav-link " aria-current="page" href="#">Home</a>
-                </li>
-                <li class="navigazione nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="navigazione nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
-        
-        
-        </div>
-
-        <!--Fine Menù in collapse-->
-        
-     </div> <!--Fine containe header-->
-
-
-     </nav>
-
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav pe-5">
+                    <li class="navigazione nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="navigazione nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="navigazione nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fine Menù in collapse-->
+        </div> <!--Fine container header-->
+    </nav>
 </header> <!--Fine Header-->
 
-
-
-
-
-
-
 <main> <!--Sezione Principale-->
+    <div class="container text-center mt-3"> <!--Container-->
+        <div class="row align-items-start">
+            <!--Colonna principale di sinistra-->
+            <div class="col-12 col-xl-9">
+                <!--Titolo-->
+                <h1 class="fs-3 text-start">Richiesta Preventivo</h1>
 
-<div class="container text-center mt-3"> <!--Contanier-->
-   
-   
-    <div class="row align-items-start">
-      
+                <!--Sottotitolo-->
+                <p class="text-start pt-2">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
 
-        <!--Colonna principale di sinsitra-->
-        <div class="col-12 col-xl-9">
+                <form id="form" action="submit"> <!--Inizio Form-->
+                    <div class="col-12 mb-3 text-start"> <!--Campo nome-->
+                        <label for="name-input" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name-input"required >
+                        <span id="errore-nome" style="color: red;"></span>
+                    </div>
 
-            <!--Titolo-->
-          <h1 class="fs-3 text-start">Richiesta Preventivo</h1>
+                    <div class="col-12 mb-3 text-start"> <!--Campo cognome-->
+                        <label for="surname-input" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="surname-input" required>
+                        <span id="errore-cognome" style="color: red;"></span>
+                    </div> 
 
+                    <div class="col-12 text-start mb-3"> <!--Campo email-->
+                        <label for="input-email" class="form-label">Indirizzo Email</label>
+                        <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" required >
+                        <span id="errore-email" style="color: red;"></span>
 
-          <!--Sottotitolo-->
-          <p class="text-start pt-2">Compila il form per richiedere un preventvo per i nostri servizi di sviluppo</p>
+                    </div>
 
+                    <div class="col-12 text-start mb-3"> <!--Select-->
+                        <label for="input-select" class="form-label">Tipo di lavoro</label>
+                        <select class="form-select" id="input-select" aria-label="Default select example" required>
+                            <option selected>Seleziona il tipo di lavoro</option>
+                            <option value="1">Sviluppo Backend</option>
+                            <option value="2">Sviluppo Frontend</option>
+                            <option value="3">Analisi Progettuale</option>
+                        </select>
+                        <span id="errore-select" style="color: red;"></span>
+                    </div>
 
+                    <div class="col-12 text-start mb-3"> <!--Campo ore di lavoro-->
+                        <label for="input-number" class="form-label">Ore di lavoro totali</label>
+                        <input type="number" class="form-control" id="input-number" aria-describedby="emailHelp" required>
+                        <span id="errore-number" style="color: red;"></span>
 
-    <form action=""> <!--Inizio Form-->
+                    </div>
 
-        <div class=" col-12 mb-3 text-start"> <!--Campo nome-->
-            <label for="name-input" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name-input" >
-          </div>
+                    <div class="col-12 mb-3 text-start"> <!--Area Commento-->
+                        <label for="text-input" class="form-label">Inserisci un commento</label>
+                        <textarea class="form-control" id="text-input" rows="2"></textarea>
+                    </div>
 
-          <div class=" col-12 mb-3 text-start"> <!--Campo cognome-->
-            <label for="surname-input" class="form-label">Cognome</label>
-            <input type="text" class="form-control" id="surname-input">
-          </div> 
+                    <div class="col-12 mb-3 text-start"> <!--Campo codice promozionale-->
+                        <label for="promo-input" class="form-label">Codice Promozionale (opzionale)</label>
+                        <input type="text" class="form-control" id="promo-input">
+                    </div>
 
+                    <div class="form-check text-start"> <!--Campo Checkbox-->
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Accetto la Privacy Policy
+                        </label>
+                    </div>
 
-          <div class=" col-12 text-start mb-3"> <!--Campo email-->
-            <label for="inpute-mail" class="form-label">Indirizzo Email</label>
-            <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp">
-          </div>
+                    <div class="row"> <!--Campo Bottone e Prezzo-->
+                        <div class="col-12 col-xl-6 mt-4"> <!--Bottone-->
+                           <button type="submit" class="btn btn-primary">Calcola Preventivo</button>
+                        </div>
+                        <div class="col-12 col-xl-6 mb-3"> <!--Prezzo-->
+                            <b id="price-title" class="fs-4 d-none">Prezzo Finale</b>
+                            <b><p id="price-normal"></p></b>
+                        </div>
+                    </div> <!--Fine Campo Bottone e Prezzo-->
+                </form> <!--Fine Form-->
+            </div> <!--Colonna principale di sinistra-->
 
-          <div class=" col-12 text-start mb-3"> <!--Select-->
-            <label for="input-select" class="form-label">Tipo di lavoro</label>
-          <select class="form-select" id="input-select" aria-label="Default select example">
-            <option selected>Seleziona il tipo di lavoro</option>
-            <option value="1">Sviluppo Backend</option>
-            <option value="2">Sviluppo frontend</option>
-            <option value="3">Analisi Progettuale</option>
-          </select>
-         </div>
-
-
-         <div class=" col-12 text-start mb-3"> <!--Campo ore di lavoro-->
-            <label for="input-number" class="form-label">Ore di lavoro totali</label>
-            <input type="number" class="form-control" id="input-number" aria-describedby="emailHelp">
-          </div>
-
-         
-         <div class=" col-12 mb-3 text-start"> <!--Area Commento-->
-            <label for="text-input" class="form-label">Inserisci un commento</label>
-            <textarea class="form-control" id="text-input" rows="2"></textarea>
-          </div>
-
-
-
-          <div class=" col-12 mb-3 text-start"> <!--Campo codice promozionale-->
-            <label for="promo-input" class="form-label">Codice Promozionale (opzionale)</label>
-            <input type="text" class="form-control" id="promo-input" >
-          </div>
-
-          <div class="form-check text-start"> <!--Campo Checkbox-->
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Accetto la Privacy Policy
-            </label>
-          </div>
-
-        <div class="row"> <!--Campo Bottone e Prezzo-->
- 
-          <div class="col-12 col-xl-6 mt-4"> <!--Bottone-->
-            <button type="button" class="btn btn-primary">Calcola Preventivo</button>
-           </div>
-
-         <div class="col-12 col-xl-6 mb-3"> <!--Prezzo-->
-            <b class="fs-4 d-none">Prezzo Finale</b>
-
-            <p id="price-normal"><b id="price-bold" class="fs-3"></b></p>
-         </div>
-
-        </div> <!--Fine Campo Bottone e Prezzo-->
-
-
-    </form> <!--Fine Form-->
-
-</div> <!--Colonna principale di sinsitra-->
-
-<!--------------------------------------------------------------------------------------------->
-
-
-     <!--Colonna di destra con card-->
-      <div class="col-12 col-xl-3">
-
-        <!--Card-->
-        <div class="card">
-            <img src="img/Progetto senza titolo - 2024-05-25T185906.428.png" class="card-img-top" alt="Foto Developer">
-            
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-
-                        <h5 class="text-start">I nostri contatti</h5>
-                        <p class="text-start">Se hai bisogno di aiuto puoi contattarci:</p>
-                    </li>
-                    <li class="list-group-item text-start">help@factory.test</li>
-                    <li class="list-group-item text-start">+1122334455</li>
-                    <li class="list-group-item text-start"> <a href="">Help Desk</a></li>
-                </ul>
-          </div>
-
-
-      </div>
-      <!--Card-->
-           
-
-    </div> <!--Colonna di destra con card-->
-
-  
-
-
-  </div> <!--Contanier-->
-
-  </main>  <!-- Fine Sezione Principale-->
-
+            <!--Colonna di destra con card-->
+            <div class="col-12 col-xl-3">
+                <!--Card-->
+                <div class="card">
+                    <img src="img/Progetto senza titolo - 2024-05-25T185906.428.png" class="card-img-top" alt="Foto-Developer">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h5 class="text-start">I nostri contatti</h5>
+                                <p class="text-start">Se hai bisogno di aiuto puoi contattarci:</p>
+                            </li>
+                            <li class="list-group-item text-start">help@factory.test</li>
+                            <li class="list-group-item text-start">+1122334455</li>
+                            <li class="list-group-item text-start"> <a href="">Help Desk</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Card-->
+            </div> <!--Colonna di destra con card-->
+        </div>
+    </div> <!--Container-->
+</main> <!--Fine Sezione Principale-->
 
 <footer>
-
-<div class="col-12 mt-5">
-
-
-<p class="text-center text-light pt-4 " style="height: 80px;">© 2024 - Tutti i Diritti Riservati</p>
-
-
-</div>
-
-
-
+    <div class="col-12 mt-5">
+        <p class="text-center text-light pt-4" style="height: 80px;">© 2024 - Tutti i Diritti Riservati</p>
+    </div>
 </footer>
 
+<!--Script JS-->
+<script src="docu.js"></script>
+<!--Script JS-->
 
-
-
-
-    <!--Script JS-->
-    <script src="docu.js"></script>
-     <!--Scrip JSt-->
-
-
-     <!--Script Bootstrap-->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <!--Script Bootstrap-->
-
+<!--Script Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--Script Bootstrap-->
 </body> <!--Fine Esercizio-->
 </html>
