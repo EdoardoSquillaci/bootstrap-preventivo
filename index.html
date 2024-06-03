@@ -27,9 +27,9 @@
             <!--Logo-->        
 
             <!--Menu in collapse-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button style="color: white;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button>    
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav pe-5">
@@ -63,26 +63,26 @@
                 <form id="form" action="submit"> <!--Inizio Form-->
                     <div class="col-12 mb-3 text-start"> <!--Campo nome-->
                         <label for="name-input" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name-input"required >
+                        <input type="text" class="form-control" id="name-input" >
                         <span id="errore-nome" style="color: red;"></span>
                     </div>
 
                     <div class="col-12 mb-3 text-start"> <!--Campo cognome-->
                         <label for="surname-input" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="surname-input" required>
+                        <input type="text" class="form-control" id="surname-input" >
                         <span id="errore-cognome" style="color: red;"></span>
                     </div> 
 
                     <div class="col-12 text-start mb-3"> <!--Campo email-->
                         <label for="input-email" class="form-label">Indirizzo Email</label>
-                        <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" required >
+                        <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp"  >
                         <span id="errore-email" style="color: red;"></span>
 
                     </div>
 
                     <div class="col-12 text-start mb-3"> <!--Select-->
                         <label for="input-select" class="form-label">Tipo di lavoro</label>
-                        <select class="form-select" id="input-select" aria-label="Default select example" required>
+                        <select class="form-select" id="input-select" aria-label="Default select example" >
                             <option selected>Seleziona il tipo di lavoro</option>
                             <option value="1">Sviluppo Backend</option>
                             <option value="2">Sviluppo Frontend</option>
@@ -93,7 +93,7 @@
 
                     <div class="col-12 text-start mb-3"> <!--Campo ore di lavoro-->
                         <label for="input-number" class="form-label">Ore di lavoro totali</label>
-                        <input type="number" class="form-control" id="input-number" aria-describedby="emailHelp" required>
+                        <input type="number" class="form-control" id="input-number" aria-describedby="emailHelp" >
                         <span id="errore-number" style="color: red;"></span>
 
                     </div>
